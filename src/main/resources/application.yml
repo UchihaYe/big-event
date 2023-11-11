@@ -1,8 +1,17 @@
 spring:
   datasource:
+    # 数据库驱动类名
     driver-class-name: com.mysql.cj.jdbc.Driver
+    # 数据库连接URL
     url: jdbc:mysql://39.106.183.232:3306/big_event?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    # 数据库用户名
     username: root
+    # 数据库密码
     password: 266700
 mybatis:
+  # MyBatis mapper配置路径
   mapper-locations: classpath*:/mapper/*.xml
+  # 开启MyBatis的下划线到驼峰命名法转换
+  configuration:
+    map-underscore-to-camel-case: true
+
